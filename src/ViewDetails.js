@@ -11,11 +11,11 @@ export default function ViewDetails(props) {
   const [selectedRow, setSelectedRow] = useState(null);
 
   const headCells = [
-    {field: 'copyrightDate', title:'Copyright Date'},
-    {field: 'biblioNumber', title:'Biblio Number'},
-    {field: 'author', title:'Author'},
-    {field: 'isbn', title:'ISBN'},
     {field: 'title', title:'Title'},
+    {field: 'author', title:'Author'},
+    {field: 'copyrightDate', title:'Copyright Date'},
+    {field: 'biblioNumber', title:'Biblio Number'},    
+    {field: 'isbn', title:'ISBN'},    
     {field: 'type', title:'Type'},
     {field: 'subject', title:'Subject(s)'},
 ]
