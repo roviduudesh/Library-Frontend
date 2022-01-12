@@ -1,16 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import axios from "axios";
 import Notification from './Notification';
 import MaterialTable from 'material-table';
 
-export default function BasicTable(props) {
+export default function ViewDetails(props) {
 
   const {setLoading} = props;
   const [records, setRecords] = useState([]);
@@ -30,6 +23,7 @@ export default function BasicTable(props) {
   useEffect(() => {
     setLoading(true);
     // console.log('USER')
+    // axios.get("https://library--backend.herokuapp.com/api/v1/book/details")
     axios.get("http://localhost:8080/api/v1/book/details")
     .then((function (response){
         console.log("response.data", response.data)
@@ -87,11 +81,13 @@ export default function BasicTable(props) {
               fontWeight: 'bold',
               color: 'black'
             }),
-
-            
           }}
         />
-      
+
+        <Notification
+          notify={notify}
+          setNotify={setNotify}
+        />
       </>
   );
 }

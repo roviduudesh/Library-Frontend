@@ -4,7 +4,7 @@ import {Alert} from "@mui/material";
 
 export default function Notification(props) {
 
-    const{notify, setNotify} = props;
+    const {notify, setNotify} = props;
 
     const handleClose = (event, reason) =>{
         setNotify({
@@ -18,7 +18,7 @@ export default function Notification(props) {
             style={{marginTop:'3%'}}
             open={notify.isOpen}
             autoHideDuration={4000}
-            anchorOrigin={{vertical:'top', horizontal:'right'}}
+            anchorOrigin={{vertical:'top', horizontal:'left'}}
             onClose={handleClose}
         >
             <Alert

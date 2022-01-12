@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import logo from './logo.svg';
 import './App.css';
-import BasicTable from './BasicTable';
+import ViewDetails from './ViewDetails';
 import Loader from './Loader';
 
 
@@ -16,7 +16,7 @@ function App() {
       <Loader
             loading = {loading}
       />
-      <BasicTable
+      <ViewDetails
         setLoading = {setLoading}
       />
     </>
