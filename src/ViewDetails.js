@@ -23,8 +23,8 @@ export default function ViewDetails(props) {
   useEffect(() => {
     setLoading(true);
     // console.log('USER')
-    // axios.get("https://library--backend.herokuapp.com/api/v1/book/details")
-    axios.get("http://localhost:8080/api/v1/book/details")
+    axios.get("https://library--backend.herokuapp.com/api/v1/book/details")
+    // axios.get("http://localhost:8080/api/v1/book/details")
     .then((function (response){
         console.log("response.data", response.data)
         setRecords(response.data.data)
